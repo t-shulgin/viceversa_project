@@ -27,5 +27,6 @@ urlpatterns = [
 
 urlpatterns += [
     path('about/', views.about),
-    path('home/', views.home),
+    path('home/', views.home, name='home'),
+    path('reversed/', views.reverse, name='reverse')
 ]

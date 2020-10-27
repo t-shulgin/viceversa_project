@@ -5,14 +5,23 @@
         <title>Title</title>
     </head>
     <body>
-        <h2>Reversed text</h2>
-
-        <form action="{% url 'home' %}">
-            <textarea name="textreview" rows="4" cols="50">
-                Some text to reverse
-            </textarea>
-            <br><br><br>
+    <table>
+        <tr>
+            <th><h2>Original text</h2></th>
+            <th><h2>Reversed text</h2></th>
+        </tr>
+        <tr>
+            <td><h4>Words in text are: {{wordcount}}</h4></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><textarea name="usertext" rows="4" cols="50">{{usertext}}</textarea></td>
+            <td><textarea name="usertext" rows="4" cols="50">{{reversedtext}}</textarea></td>
+        </tr>
+    </table>
+    <form action="{% url 'home' %}">
             <input type="submit" value="ReReverse!">
-        </form>
+    </form>
+
     </body>
 </html>
